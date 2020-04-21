@@ -28,22 +28,20 @@ void loop()
             digitalWrite(light,0);
             continue;
         }
-            digitalWrite(light, 1);
-            while (digitalRead(2)==0)
-            {   
-                if (digitalRead(2)==1)
-                {               
-                    count++;
-                    tone(8,400,100);        
-                    Serial.println("Faster X 2 (Current Speed : X" + String(pow(2, count)) + ")");                                
-                    time = time/2;
-                }
+        digitalWrite(light, 1);
+        while (digitalRead(2)==0)
+        {   
+            if (digitalRead(2)==1)
+            {               
+                count++;
+                tone(8,400,100);        
+                Serial.println("Faster X 2 (Current Speed : X" + String(pow(2, count)) + ")");                                
+                time = time/2;
+            }
                        
-            }     
-            delay(time);
-            digitalWrite(light, 0);
-
-               
+        }     
+        delay(time);
+        digitalWrite(light, 0);               
     }
     for (light = 13 ; light >= 3 ; light--)
         {
@@ -52,21 +50,19 @@ void loop()
             digitalWrite(light,0);
             continue;
         }
-            digitalWrite(light, 1);
-            while (digitalRead(2)==0)
-            {   
-                if (digitalRead(2)==1)
-                {               
-                    count++;
-                    tone(8,400,100);        
-                    Serial.println("Faster X 2 (Current Speed : X" + String(pow(2, count)) + ")");                                
-                    time = time/2;
-                }
+        digitalWrite(light, 1);
+        while (digitalRead(2)==0)
+        {   
+            if (digitalRead(2)==1)
+            {               
+                count++;
+                tone(8,400,100);        
+                Serial.println("Faster X 2 (Current Speed : X" + String(pow(2, count)) + ")");                                
+                time = time/2;
+            }
                        
-            }     
-            delay(time);
-            digitalWrite(light, 0);
-
-          
+        }     
+        delay(time);
+        digitalWrite(light, 0);         
     }    
 }
