@@ -18,7 +18,7 @@ void setup(){
 }
 int count = 0 ;
 int light = 3;
-int time = (100);
+int time = 100;
 void loop()
 {             
     for (light = 3 ; light <= 13 ; light++)
@@ -31,6 +31,7 @@ void loop()
         digitalWrite(light, 1);
         while (digitalRead(2)==0)
         {   
+            delay(200);
             if (digitalRead(2)==1)
             {               
                 count++;
@@ -38,7 +39,7 @@ void loop()
                 Serial.println("Faster X 2 (Current Speed : X" + String(pow(2, count)) + ")");                                
                 time = time/2;
             }
-                       
+                   
         }     
         delay(time);
         digitalWrite(light, 0);               
@@ -53,6 +54,7 @@ void loop()
         digitalWrite(light, 1);
         while (digitalRead(2)==0)
         {   
+            delay(200);
             if (digitalRead(2)==1)
             {               
                 count++;
